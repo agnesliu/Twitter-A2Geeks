@@ -1,0 +1,34 @@
+This package of programs is for figuring out who is the most influential person in a2geeks.
+In this package:
+1. geekstwitter.py
+    function: get the sum of tweets created by a2geeks in January 2012 and interactions(reply/mention/retweet) among members.
+    input: A2GeeksTwitterUsernames.txt
+    output: retweets.txt, sumoftweets.txt
+2. connection.py
+    function: compute Tweets/Retweets/Influence Score for each geek
+    input: A2GeeksTwitterUsernames.txt, retweets.txt, sumoftweets.txt
+    output: score.txt
+3. twitterdb.py
+    function: create database and tables
+    output: a2geeksTwitter.db
+4. twitterinsert.py
+    function: insert nodes/edges into tables
+    connect: a2geeksTwitter.db
+    input: A2GeeksTwitterUsernames.txt, retweets.txt
+    output: data inserted in two talbes
+5. network.py
+    function: create a .gexf file
+    connect: a2geeksTwitter.db
+    output: twitternetwork.gexf
+6. geeksretweet.py
+    function: get the number of retweets for each tweet created by a2geeks in January 2012
+    input: A2GeeksTwitterUsernames.txt
+    output: retweetsby.txt
+7. retweetscount.py
+    funtion: get the sum of retweets for each a2geeks member
+    input: retweetsby.txt
+    output: sumofretweets.txt
+8. pubinf.py
+    function: compute the influential score for each member (score=sumofretweet/sumoftweet)
+    input: sumoftweets.txt, sumofretweets.txt
+    output: publicscore.txt
